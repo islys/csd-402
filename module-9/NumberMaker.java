@@ -28,16 +28,16 @@ public class NumberMaker {
 
             // random numbers
             FileWriter writeToFile = new FileWriter(file, true); 
-            BufferedWriter bw = new BufferedWriter(writeToFile);
+            BufferedWriter buffwrite = new BufferedWriter(writeToFile);
 
             for (int i = 0; i < 10; i++) {
                 int randomNum = rand.nextInt(100); 
-                bw.write(randomNum + " ");
+                buffwrite.write(randomNum + " ");
             }
 
-            // add a black line and close bw
-            bw.newLine(); 
-            bw.close();
+            // add a black line and close the writing buffer
+            buffwrite.newLine(); 
+            buffwrite.close();
 
             // read file contents
             FileReader readFile = new FileReader(file);
